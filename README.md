@@ -87,7 +87,7 @@ python3 app.py
 python3 app.py
 ```
 
-2. Access the website at: `http://127.0.0.1:5001`
+2. Access the website at: `http://127.0.0.1:5000`
 
 3. Register a new account or login with existing credentials
 
