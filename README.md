@@ -2,6 +2,14 @@
 
 A modern web application built with Flask that helps users monitor their cybersecurity status, check for data breaches, and manage their security profile. The application integrates with SpyCloud's API to provide real-time threat intelligence and breach notifications.
 
+**Note:-** The website is currently non-functional due to an unresolved error in the login logic
+
+**Created by:-** 
+Partha P.G. **(Frontend and Backend)**
+Nikhil **(API research)**
+Anuraag **(Figma design)**
+
+
 ## Features
 
 ### 🔐 User Authentication
