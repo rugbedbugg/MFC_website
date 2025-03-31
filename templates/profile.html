@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="profile-container">
+    <h2>Profile</h2>
+    <form method="POST" class="profile-form">
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" value="{{ user.first_name if user.first_name else '' }}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" value="{{ user.last_name if user.last_name else '' }}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" value="{{ user.email }}" required readonly>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter new password to change">
+        </div>
+        
+        <button type="submit" class="btn-primary">Save Changes</button>
+    </form>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</div>
+{% endblock %} 

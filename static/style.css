@@ -1,0 +1,325 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+/* Container styles */
+.container {
+    text-align: center;
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #0056b3; /* Darker blue for nav */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+/* Login form container */
+.login-form {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* Input fields */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Button styles */
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #00e6ff; /* Light blue button */
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hover effect for button */
+.btn-primary:hover {
+    background-color: #00b4d8; /* Darker blue on hover */
+}
+
+/* Links */
+a {
+    color: #00e6ff; /* Light blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Flash messages */
+.messages {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.messages li {
+    background-color: #ff5252; /* Red background for error messages */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.threats-list {
+    margin-top: 20px;
+}
+
+.threat-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.threat-date {
+    color: #00e6ff;
+    font-weight: bold;
+}
+
+.threat-description {
+    color: white;
+}
+
+/* Threat severity styles */
+.threat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.threat-severity {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.high-severity {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.high-severity .threat-severity {
+    color: #ff4444;
+}
+
+.medium-severity {
+    background-color: rgba(255, 165, 0, 0.1);
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.medium-severity .threat-severity {
+    color: #ffa500;
+}
+
+.low-severity {
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.low-severity .threat-severity {
+    color: #00ff00;
+}
+
+.no-threats {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Breach Checker styles */
+.breach-checker-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.breach-form {
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.results-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.breaches-list {
+    margin-top: 15px;
+}
+
+.breach-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.breach-text {
+    color: white;
+}
+
+/* About page styles */
+.about-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.about-container ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.about-container li {
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Profile styles */
+.profile-container {
+    background-color: #1e88e5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    color: white;
+}
+
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.profile-form .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9em;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.profile-form input:read-only {
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: not-allowed;
+}
+
+.profile-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.profile-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: #1e88e5;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-form button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}

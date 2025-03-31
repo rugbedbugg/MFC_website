@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="breach-checker-container">
+    <h2>Breach Checker</h2>
+    <form method="POST" class="breach-form">
+        <div class="form-group">
+            <label for="query">Enter an email or domain to check for breaches:</label>
+            <input type="text" id="query" name="query" required placeholder="example@email.com or example.com">
+        </div>
+        <button type="submit" class="btn-primary">Check for Breaches</button>
+    </form>
+    
+    {% if breaches %}
+    <div class="results-container">
+        <h3>Results:</h3>
+        <div class="breaches-list">
+            {% for breach in breaches %}
+            <div class="breach-item">
+                <span class="breach-text">{{ breach }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

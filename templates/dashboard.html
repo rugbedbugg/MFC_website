@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard-container">
+    <h2>Threat Dashboard</h2>
+    {% if threats %}
+        <div class="threats-list">
+            {% for threat in threats %}
+            <div class="threat-item {% if threat.severity == 'High' %}high-severity{% elif threat.severity == 'Medium' %}medium-severity{% else %}low-severity{% endif %}">
+                <div class="threat-header">
+                    <span class="threat-date">{{ threat.date }}</span>
+                    <span class="threat-severity">{{ threat.severity }}</span>
+                </div>
+                <span class="threat-description">{{ threat.description }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="no-threats">
+            <p>No threats detected at this time.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

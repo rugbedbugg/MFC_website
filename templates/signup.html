@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="{{ url_for('dashboard') }}">Threat Dashboard</a>
+            <a href="{{ url_for('breach_checker') }}">Breach Checker</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            {% if 'user_id' in session %}
+                <a href="{{ url_for('logout') }}" style="float: right;">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" style="float: right;">Login</a>
+            {% endif %}
+        </nav>
+        <div class="login-form">
+            <h2>Create an account</h2>
+            <form method="POST">
+                <label for="email">Enter your email address to create your account</label><br>
+                <input type="email" id="email" name="email" required placeholder="example@gmail.com"><br>
+                <label for="password">Choose a password</label><br>
+                <input type="password" id="password" name="password" required placeholder="Password"><br>
+                <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a>.</p>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+</html>
