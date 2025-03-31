@@ -4,7 +4,7 @@ A modern web application built with Flask that helps users monitor their cyberse
 
 **Note:-** The website is currently non-functional due to an unresolved error in the login logic
 
-**Created by:-** 
+**Created by:-**  
 Partha P.G. **(Frontend and Backend)**  
 Nikhil **(API research)**  
 Anuraag **(Figma design)**  
