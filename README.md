@@ -103,35 +103,23 @@ python3 app.py
 
 ```
 MFC_website-2/
-├── app.py                 # Main application file
+├── app.py                # Main application file
 ├── config.py             # Configuration settings
 ├── requirements.txt      # Project dependencies
 ├── .env                  # Environment variables
 ├── instance/            
-│   └── users.db         # SQLite database
+│   └── users.db            # SQLite database
 ├── static/
-│   └── style.css        # CSS styles
+│   └── style.css           # CSS styles
 ├── templates/
-│   ├── base.html        # Base template
-│   ├── dashboard.html   # Dashboard template
-│   ├── login.html       # Login template
-│   ├── profile.html     # Profile template
-│   └── signup.html      # Registration template
+│   ├── base.html           # Base template
+│   ├── dashboard.html      # Dashboard template
+│   ├── login.html          # Login template
+│   ├── profile.html        # Profile template
+│   └── signup.html         # Registration template
 └── services/
-    └── spycloud_service.py  # SpyCloud API integration
+    └── spycloud_service.py # SpyCloud API integration
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
@@ -139,14 +127,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Flask framework and its contributors
 - SQLAlchemy team for the ORM
 - All open-source packages used in this project
-
-## Support
-
-For support, please open an issue in the repository or contact the development team.
-
-## Security
-
-If you discover any security-related issues, please email security@example.com instead of using the issue tracker.
-
----
-Built with ❤️ by Your Team Name 
